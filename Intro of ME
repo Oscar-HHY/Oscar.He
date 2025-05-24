@@ -1,0 +1,58 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function PersonalWebsite() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-6">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-3xl mx-auto"
+      >
+        <h1 className="text-4xl font-bold text-center mb-4">何恒宇 | Hengyu He</h1>
+        <p className="text-center text-gray-600 mb-8">
+          精算与金融数学专业 | 数据分析 | 数学建模 | 多语言沟通者
+        </p>
+
+        <Card className="mb-6">
+          <CardContent className="p-4">
+            <h2 className="text-2xl font-semibold mb-2">关于我</h2>
+            <p>
+              我是加拿大麦克马斯特大学精算与金融数学在读学生，GPA 3.7/4.0。擅长数据分析、数学建模、市场策略分析，拥有国际视野与跨文化沟通能力。熟练使用 Python、SQL、R、SAS、Excel 等工具，能够将复杂数据转化为可操作洞察。
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-6">
+          <CardContent className="p-4">
+            <h2 className="text-2xl font-semibold mb-2">经历亮点</h2>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Google 数据分析实习：用 Excel 和 SQL 分析 GMV 趋势，提供增长策略</li>
+              <li>埃博拉疫情数学建模：R 仿真 100+ 次，预测疫情消退时间，优化防控策略</li>
+              <li>证券市场研究项目：建立宏观因子评分模型，预测三次重大市场波动</li>
+              <li>Anji International 项目助理经理：协调数百订单，多次获“最佳员工”</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-6">
+          <CardContent className="p-4">
+            <h2 className="text-2xl font-semibold mb-2">联系方式</h2>
+            <p>Email: heh41@mcmaster.ca</p>
+            <p>电话: 176-2358-3685</p>
+            <p>
+              LinkedIn: <a href="https://www.linkedin.com/in/hengyu-he-691b6b298/" className="text-blue-500" target="_blank">个人主页</a>
+            </p>
+          </CardContent>
+        </Card>
+
+        <div className="text-center">
+          <Button className="px-6 py-2">下载简历</Button>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
